@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var streamUrl = '{{ stream_url }}';
+        var $output = $('#output');
+        $.get(streamUrl, function(data) {
+          $output.append(data);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>
